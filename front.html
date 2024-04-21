@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-image: url("geeks-2894621_1920.jpg"); /* Replace 'background.jpg' with your image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.91;
+    }
+
+    .container {
+        width: 300px;
+        padding: 20px;
+        margin-left: 300px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .google-btn {
+        width: 48%;
+        background-color: #dd4b39;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .google-btn:hover {
+        background-color: #c23321;
+    }
+    .sign-in-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .sign-in-btn:hover {
+        background-color: #0056b3;
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+    <div class="button-group">
+        <button class="sign-in-btn">Sign in</button>
+        <button class="google-btn" onclick="signInWithGoogle()">Sign in with Google</button>
+    </div>
+</div>
+
+<script>
+    function signInWithGoogle() {
+        // Your code to handle sign in with Google
+        // Redirect to Google sign-in page or use Google SDK for authentication
+        // For demonstration purpose, we will just log a message
+        console.log("Signing in with Google...");
+    }
+
+    document.querySelector(".sign-in-btn").addEventListener("click", function() {
+        // Your code to handle sign in
+        // For demonstration purpose, we will just log a message
+        console.log("Signing in...");
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Retrieve email and password values from the form
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        // Your code to handle login with email and password
+        // For demonstration purpose, we will just log the values
+        console.log("Email:", email);
+        console.log("Password:", password);
+
+        // Clear the form fields after submission (optional)
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+    });
+</script>
+</body>
+</html>
