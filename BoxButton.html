@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <label for="">Number1</label> <input type="text" id="t1"><br><br>
+        <label for="">Number1</label> <input type="text" id="t2"><br><br>
+        <select name="" id="action">
+            <option value="addition">addition</option>
+            <option value="substraction">substraction</option>
+            <option value="division">division</option>
+            <option value="multiplication">multiplication</option>
+        </select><br><br>
+        <button onclick="processing()">Click</button><br><br>
+        <p id="output"></p>
+        <script>
+            function processing(){
+                let t1,t2,act,output;
+                t1=parseInt(document.getElementById('t1').value);
+                t2=parseInt(document.getElementById('t2').value);
+                act=document.getElementById('action').value;
+                output=document.getElementById('output');
+
+                if (act =='addition'){
+                    res=t1+t2;
+                }
+                else if(act =='substraction'){
+                    res=t1-t2;
+                }
+                else if(act =='division'){
+                    res=t1/t2;
+                }
+                else{
+                    res=t1*t2;
+                }
+                output.innerText=res;
+            }
+        </script>
+    </body>
+</html>
